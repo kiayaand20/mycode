@@ -1,0 +1,11 @@
+#!/user/bin/env python3
+
+def main():
+
+    user_input = input("What is your name:")
+    user_input2 = input("What is today:")
+
+    print("Hello" + user_input + "!" + "Happy" + user_input2 + "!")
+
+
+main()

@@ -1,6 +1,6 @@
 #!usr/bin/env python3
-
 import random
+import time
 
 def main():
 
@@ -62,25 +62,22 @@ def main():
         else:
             print("Guess our color choices aren't good enough. Let's just see where you end up.\n")
     
-    #print statement notifying user of end of game and a decision about their house is about to be made
-        print("It's decision time. Countdown Please-")
-    
-    #while loop that performs a countdown from 3 to 1
-        decision = 3
+        print("It's decision time. you belong to House...")
 
-        while decision > 0:
-            print(decision)
-            decision = decision - 1
-
-        print("\nYou belong to House...\n")
-    
-    #choice() method that decides the hogwart house of user at random
-        print(random.choice(hogwart_houses))
+    #while loop that performs a countdown from 5 to 1
+        countdown = 5
+        while countdown > 0:
+            print(countdown)
+            time.sleep(1)
+            countdown = countdown - 1  
+        print(random.choice(hogwart_houses),"!")
 
         game_restart = input("\nWant to try again to get another house? (Yes, No): ")
+    
         if game_restart.lower() != "yes": 
             game_start = 'False';
             print("See you next time!")
+
 
 if __name__ == "__main__":
     main()
